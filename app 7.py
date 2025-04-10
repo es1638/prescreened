@@ -21,7 +21,7 @@ if now >= market_close - timedelta(minutes=30):
     st.warning("Less than 30 minutes left in trading day. Results may be unreliable.")
 
 # Load screened tickers from morning screener
-screened_df = pd.read_csv("intraday_with_premarket_features.csv")
+screened_df = pd.read_csv("screened_tickers.csv")
 tickers = screened_df['ticker'].unique().tolist()
 
 st.title("📈 Live Intraday Buy Signal Predictor")
